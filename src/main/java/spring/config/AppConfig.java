@@ -1,6 +1,6 @@
-package com.user.config;
+package spring.config;
 
-import com.user.model.User;
+import spring.model.User;
 import javax.sql.DataSource;
 import java.util.Properties;
 import org.apache.commons.dbcp2.BasicDataSource;

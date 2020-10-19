@@ -1,7 +1,7 @@
-package com.user.dao.impl;
+package spring.dao.impl;
 
-import com.user.dao.UserDao;
-import com.user.model.User;
+import spring.dao.UserDao;
+import spring.model.User;
 import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

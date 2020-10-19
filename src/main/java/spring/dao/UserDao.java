@@ -1,6 +1,6 @@
-package com.user.dao;
+package spring.dao;
 
-import com.user.model.User;
+import spring.model.User;
 import java.util.List;
 
 public interface UserDao {

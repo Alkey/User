@@ -1,6 +1,6 @@
-import com.user.config.AppConfig;
-import com.user.model.User;
-import com.user.service.UserService;
+import spring.config.AppConfig;
+import spring.model.User;
+import spring.service.UserService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class MainApp {
