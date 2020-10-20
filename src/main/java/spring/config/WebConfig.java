@@ -11,11 +11,4 @@ import org.springframework.web.servlet.view.JstlView;
 @EnableWebMvc
 @ComponentScan(basePackages = {"spring.controllers"})
 public class WebConfig {
-
-    @Bean
-    public InternalResourceViewResolver resolver() {
-        InternalResourceViewResolver resolver = new InternalResourceViewResolver();
-        resolver.setViewClass(JstlView.class);
-        return resolver;
-    }
 }
