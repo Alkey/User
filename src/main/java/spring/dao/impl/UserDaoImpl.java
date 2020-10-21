@@ -1,8 +1,8 @@
 package spring.dao.impl;
 
+import java.util.List;
 import spring.dao.UserDao;
 import spring.model.User;
-import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public class UserDaoImpl implements UserDao {
-    private SessionFactory sessionFactory;
+    private final SessionFactory sessionFactory;
 
     @Autowired
     public UserDaoImpl(SessionFactory sessionFactory) {
@@ -45,6 +45,13 @@ public class UserDaoImpl implements UserDao {
         try (Session session = sessionFactory.openSession()) {
             Query<User> query = session.createQuery("from User", User.class);
             return query.getResultList();
+        }
+    }
+
+    @Override
+    public User get(Long id) {
+        try(Session session = sessionFactory.openSession()) {
+            return session.get(User.class, id);
         }
     }
 }

@@ -1,16 +1,16 @@
 package spring.config;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.PropertySource;
-import org.springframework.core.env.Environment;
-import spring.model.User;
 import javax.sql.DataSource;
 import java.util.Properties;
 import org.apache.commons.dbcp2.BasicDataSource;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.env.Environment;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
+import spring.model.User;
 
 @Configuration
 @PropertySource("classpath:db.properties")
@@ -19,7 +19,7 @@ import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
         "spring.dao"
 })
 public class AppConfig {
-    private Environment environment;
+    private final Environment environment;
 
     @Autowired
     public AppConfig(Environment environment) {

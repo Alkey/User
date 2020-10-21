@@ -1,11 +1,12 @@
 package spring.service;
 
-import spring.model.User;
-
 import java.util.List;
+import spring.model.User;
 
 public interface UserService {
     void add(User user);
 
     List<User> listUsers();
+
+    User get(Long id);
 }
